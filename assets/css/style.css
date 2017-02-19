@@ -1,0 +1,49 @@
+body {
+  background-color: grey;
+}
+
+#trivia-main {
+  background-color: yellow;
+  height: 800px;
+}
+
+#trivia-title {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#trivia-display {
+  margin-bottom: 20px;
+}
+
+.margin-top-some {
+  margin-top: 20px;
+}
+
+.hover-highlight:hover {
+  background-color: pink;
+  border: 2px solid blue;
+}
+
+.always-highlight {
+  background-color: pink;
+  border: 2px solid blue;
+}
+
+.hover-highlight:active, .always-highlight:active {
+  background-color: white;
+  border: 2px solid red;
+}
+
+#div-question {
+  display: none;
+}
+
+#answer-display {
+  display: none;
+}
+
+
+#div-results {
+  display: none;
+}
