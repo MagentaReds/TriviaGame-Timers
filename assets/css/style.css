@@ -27,7 +27,7 @@ body {
   bottom: 0;
 }
 
-#STARWARS {
+#title2 {
   height: 0;
 }
 
@@ -43,7 +43,7 @@ body {
   display: flex;
   align-items: center;
 
-  margin-top: -1500px;
+  margin-top: -1000px;
 }
 
 .no-scrollbar {

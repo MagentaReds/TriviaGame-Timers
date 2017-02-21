@@ -160,29 +160,7 @@ function nextRound() {
 }
 
 
-var myTimeout =null;
- 
-//fancy animations, that lead into the game starting
-function startAnimation(){
-  $("#long-ago").animate({"opacity": "1"}, 5000, animate2);  
-}
 
-function animate2(){
-  $("#long-ago").animate({"opacity": "0"}, 2000);
-  $("#STARWARS").animate({"opacity": "1", "height": "480px"}, 2000); 
-  myTimeout=setTimeout(animate3, 4000);
-}
-
-function animate3() {
-  $("#STARWARS").animate({"opacity": "0"}, 2000); 
-  $("#STARWARStitle").animate({"opacity": "1"}, 2000); 
-  $("#title-subtext").animate({"opacity": "1"}, 2000); 
-  myTimeout=setTimeout(animate4, 5000);
-}
-
-function animate4(){
-  
-}
 
 
 startAnimation();

@@ -12,18 +12,19 @@
 </head>
 <body class="no-scrollbar">
 
-<img id="long-ago" class="fixed-center-faded" alt="A long time ago, in a galaxy far, far away" src="./assets/images/longtimeago.jpg">
-<img id="STARWARS" class="fixed-center-faded" alt="STAR WARS" src="./assets/images/starwarslogo.jpg">
-<img id="STARWARStitle" class="fixed-center-faded" alt="STAR WARS" src="./assets/images/titleshot.jpg">
-<h1 id="title-subtext" class="fixed-center-faded">A Trivia Game!</h1>
+<section id="animation">
+  <img id="title1" class="fixed-center-faded" alt="A long time ago, in a galaxy far, far away" src="./assets/images/longtimeago.jpg">
+  <img id="title2" class="fixed-center-faded" alt="STAR WARS" src="./assets/images/starwarslogo.jpg">
+  <h1 id="title-subtext" class="fixed-center-faded">A Trivia Game!</h1>
 
-<h1 id="skip-intro" class="fixed-bottom always-highlight">Click Me to Skip</h1>
+  <h1 id="skip-intro" class="fixed-bottom always-highlight">Click Me to Skip</h1>
+</section>
 
 
 
 
 <div id="main-content" class="container">
-  <div class="row vertical-center">
+  <div class="row off-screen-vertical-center">
 
     <div id="trivia-main" class="col-sm-10 col-sm-offset-1 text-center hidden">
       <h1 id="trivia-title">The <strong>STAR WARS HOLIDAY SPECIAL</strong> Trivia Game!</h1>
@@ -78,6 +79,8 @@
   crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="./assets/javascript/questions.js"></script>
+<script type="text/javascript" src="./assets/javascript/intros.js"></script>
+<script type="text/javascript" src="./assets/javascript/animation.js"></script>
 <script type="text/javascript" src="./assets/javascript/game.js"></script>
 
 </html>
