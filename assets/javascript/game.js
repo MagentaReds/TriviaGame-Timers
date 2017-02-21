@@ -162,5 +162,5 @@ function nextRound() {
 
 
 
-
+//Start the intro page animation
 startAnimation();

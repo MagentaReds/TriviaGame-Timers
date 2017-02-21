@@ -9,19 +9,19 @@ var myIntros = [
   },
   {
     url: "./assets/images/intros/han-intro.jpg",
-    desc: "Harrison Ford as Han Solo"
+    desc: "Harrison Ford as Harrison Ford as Han Solo"
   },
   {
     url: "./assets/images/intros/leia-intro.jpg",
-    desc: "Carrie Fisher as Leia Organna"
+    desc: "Carrie Fisher as Princess Leia"
   },
   {
     url: "./assets/images/intros/c3po-intro.jpg",
-    desc: "Anthony Daniels as C3P0"
+    desc: "with... Anthony Daniels as Golden Rod"
   },
   {
     url: "./assets/images/intros/chew-intro.jpg",
-    desc: "Peter Mayhew as Chewbacca"
+    desc: "Peter Mayhew as a Walking Shag Carpet"
   },
   {
     url: "./assets/images/intros/r2d2-intro.jpg",
@@ -32,24 +32,24 @@ var myIntros = [
     desc: "Stock Footage as Darth Vader"
   },
   {
-    url: "./assets/images/intros/stars1.jpg",
-    desc: "...with"
-  },
-  {
     url: "./assets/images/intros/chewfam-intro.jpg",
-    desc: "Chewbacca's Family"
+    desc: "Introducing: Chewbacca's Family"
   },
   {
     url: "./assets/images/intros/malla-intro.jpg",
-    desc: "Malla"
+    desc: "His wife, Malla"
   },
   {
     url: "./assets/images/intros/itchy-intro.jpg",
-    desc: "Itchy"
+    desc: "His father, Itchy"
   },
   {
     url: "./assets/images/intros/lumpy-intro.jpg",
-    desc: "Lumpy"
+    desc: "His son, Lumpy as played by a garbage disposal"
+  },
+    {
+    url: "./assets/images/intros/stars1.jpg",
+    desc: "With Special Guest Stars..."
   },
   {
     url: "./assets/images/intros/ackmena-intro.jpg",
@@ -57,19 +57,15 @@ var myIntros = [
   },
   {
     url: "./assets/images/intros/saun-intro.jpg",
-    desc: "Art Carney"
+    desc: "Art Carney as Beatrice Arthur"
   },
   {
     url: "./assets/images/intros/mermena-intro.jpg",
     desc: "Diahann Carroll"
   },
   {
-    url: "./assets/images/intros/stars1.jpg",
-    desc: "...Featuring"
-  },
-  {
     url: "./assets/images/intros/starship-intro.jpg",
-    desc: "Music by Jefferson Starship"
+    desc: "The Jefferson Starship"
   },
   {
     url: "./assets/images/intros/dromboid-intro.jpg",
