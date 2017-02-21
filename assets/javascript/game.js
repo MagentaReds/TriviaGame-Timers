@@ -27,9 +27,10 @@ var trivia_game = {
   },
 
   //hide/shows divs we want hidden at the start of the game once the start/restart button is pressed
+  //using bootstrap's hidden/show classes
   startDisplay: function() {
-    $("#start, #div-results, #answer-display").hide();
-    $("#div-question, #choices-display").show();
+    $("#start, #div-results, #answer-display").addClass("hidden");
+    $("#div-question, #choices-display").removeClass("hidden");
   },
 
   //main game function, displays a question and anwsers, sets timers
@@ -74,8 +75,8 @@ var trivia_game = {
 
   //display the end of game stats, shows/hides elements we want
   displayGameResults: function() {
-    $("#div-question").hide();
-    $("#div-results").show();
+    $("#div-question").addClass("hidden");
+    $("#div-results").removeClass("hidden");
 
     $("#correct-answers").text(this.correct);
     $("#incorrect-answers").text(this.incorrect);
@@ -108,8 +109,8 @@ var trivia_game = {
     clearInterval(this.timerId);
 
     //console.log(bool);
-    $("#choices-display").hide();
-    $("#answer-display").show();
+    $("#choices-display").addClass("hidden");
+    $("#answer-display").removeClass("hidden");
     $("#image-display").attr("src", this.currentQuestion.image);
 
     var result="";
@@ -145,8 +146,9 @@ var trivia_game = {
 //since DOM elements are always on the page and only shown, hidden, we only need to set the on click event listeners once for those elements
 $("#start, #restart").on("click", function() { trivia_game.newGame(); });
 $(".answer-select").on("click", function() { trivia_game.selectAnswer($(this).attr("data-bool")); });
+$("#skip-intro").on("click", endAnimation);
 
-//helper functions for interval and setTimeout to get correct execution context
+//helper functions for interval and setTimeout to get correct execution context when set from inside trivia_game
 function timedOut() {
   trivia_game.timedOut();
 }
@@ -156,3 +158,31 @@ function timerUpdate() {
 function nextRound() {
   trivia_game.runGame();
 }
+
+
+var myTimeout =null;
+ 
+//fancy animations, that lead into the game starting
+function startAnimation(){
+  $("#long-ago").animate({"opacity": "1"}, 5000, animate2);  
+}
+
+function animate2(){
+  $("#long-ago").animate({"opacity": "0"}, 2000);
+  $("#STARWARS").animate({"opacity": "1", "height": "480px"}, 2000); 
+  myTimeout=setTimeout(animate3, 4000);
+}
+
+function animate3() {
+  $("#STARWARS").animate({"opacity": "0"}, 2000); 
+  $("#STARWARStitle").animate({"opacity": "1"}, 2000); 
+  $("#title-subtext").animate({"opacity": "1"}, 2000); 
+  myTimeout=setTimeout(animate4, 5000);
+}
+
+function animate4(){
+  
+}
+
+
+startAnimation();

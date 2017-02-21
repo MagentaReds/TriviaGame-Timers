@@ -1,15 +1,72 @@
 body {
-  background-color: grey;
+  background: #000 url("../images/stars1.jpg") no-repeat fixed center;
+  background-size: cover;
+  /*color: #ffd700; star wars yellow*/
+  color: rgb(229,177,58); /*R: 229 G: 177 B: 58 */ /*R: 75 G: 213 B: 238*/ /*rgb(229,177,58) rgb(75,213,238) */
+  font-family: "Droid Sans", arial, verdana, sans-serif;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.fixed-center-faded {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+}
+
+#STARWARS {
+  height: 0;
+}
+
+#title-subtext {
+  padding-top: 480px;
+}
+
+.off-screen-vertical-center {
+
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+
+  margin-top: -1500px;
+}
+
+.no-scrollbar {
+  overflow: hidden;
+}
+
+#start{
+  margin-top: 100px;
+}
+
+#main-content {
+
 }
 
 #trivia-main {
-  background-color: yellow;
+  background: green url("../images/kashyyyk1.jpg") no-repeat scroll center;
+  background-size: cover;
   height: 800px;
 }
 
 #trivia-title {
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 #trivia-display {
@@ -21,29 +78,24 @@ body {
 }
 
 .hover-highlight:hover {
-  background-color: pink;
-  border: 2px solid blue;
+  background-color: darkslategray;
+  border: 2px solid white;
+  color: rgb(75,213,238);
 }
 
 .always-highlight {
-  background-color: pink;
-  border: 2px solid blue;
+  background-color: darkslategray;
+  border: 2px solid white;
+  color: rgb(75,213,238);
 }
 
 .hover-highlight:active, .always-highlight:active {
   background-color: white;
   border: 2px solid red;
+  color: rgb(75,213,238);
 }
 
-#div-question {
-  display: none;
-}
-
-#answer-display {
-  display: none;
-}
-
-
-#div-results {
-  display: none;
+#image-display {
+  height: 300px;
+  width: 400px;
 }

@@ -3,47 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <title>Trivia Game</title>
+
+  <!--google font link -->
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
-<body>
+<body class="no-scrollbar">
 
-<div class="container margin-top-some">
-  <div class="row">
-    <div id="trivia-main" class="col-sm-10 col-sm-offset-1 text-center">
-      <h1 id="trivia-title">The STAR WARS HOLIDAY SPECIAL Trivia Game!</h1>
+<img id="long-ago" class="fixed-center-faded" alt="A long time ago, in a galaxy far, far away" src="./assets/images/longtimeago.jpg">
+<img id="STARWARS" class="fixed-center-faded" alt="STAR WARS" src="./assets/images/starwarslogo.jpg">
+<img id="STARWARStitle" class="fixed-center-faded" alt="STAR WARS" src="./assets/images/titleshot.jpg">
+<h1 id="title-subtext" class="fixed-center-faded">A Trivia Game!</h1>
+
+<h1 id="skip-intro" class="fixed-bottom always-highlight">Click Me to Skip</h1>
+
+
+
+
+<div id="main-content" class="container">
+  <div class="row vertical-center">
+
+    <div id="trivia-main" class="col-sm-10 col-sm-offset-1 text-center hidden">
+      <h1 id="trivia-title">The <strong>STAR WARS HOLIDAY SPECIAL</strong> Trivia Game!</h1>
         
       <div id="trivia-display" class="row">
         <div class="col-sm-8 col-sm-offset-2">
           <div id="start" class="always-highlight"><h2>Start Game!</h2></div>
 
-          <div id="div-question">
+          <div id="div-question" class="hidden">
             <div><h3>Time Remaining: <span id="timer-display"></span> Seconds</h3></div>
+            <hr>
             <div><h3 id="question-display">Is this a test?</h3></div>
+            <hr>
             <div id="choices-display">
               <div id="answer0" class="hover-highlight answer-select"><h2>Answer1</h2></div>
               <div id="answer1" class="hover-highlight answer-select"><h2>Answer2</h2></div>
               <div id="answer2" class="hover-highlight answer-select"><h2>Answer3</h2></div>
               <div id="answer3" class="hover-highlight answer-select"><h2>Answer4</h2></div>
             </div>
-            <div id="answer-display">
+            <div id="answer-display" class="hidden">
               <h3 id="correct-answer"></h3>
               <img id="image-display" alt=" " src="">
               <h3 id="question-info"></h3>
             </div>
           </div>
 
-          <div id="div-results">
-            <h3>All Done, here's how you did</h3>
-            <p>Correct Answers: <span id="correct-answers">0</span>
-            <p>Incorrect Answers: <span id="incorrect-answers">0</span>
-            <p>Unanswerd: <span id="unanswered-answers">0</span>
+          <div id="div-results" class="hidden">
+            <h2>All Done, here's how you did</h3>
+            <hr>
+            <h3>Correct Answers: <span id="correct-answers">0</span></h3>
+            <h3>Incorrect Answers: <span id="incorrect-answers">0</span></h3>
+            <h3>Unanswerd: <span id="unanswered-answers">0</span></h3>
+            <hr>
             <h1 id="restart" class="hover-highlight">Start over?</h1>
           </div>
+
         </div>
       </div>
+
     </div>
+
   </div>
 </div>
 
