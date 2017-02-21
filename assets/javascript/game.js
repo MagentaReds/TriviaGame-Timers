@@ -57,6 +57,7 @@ var trivia_game = {
     console.log(this.currentQuestion);
     $("#timer-display").text("10");
     $("#question-display").text(this.currentQuestion.question);
+    $("#image-display").attr("src", this.currentQuestion.image);
     for(var i=0; i<4; ++i) {
       var rng=Math.floor(Math.random()*this.currentQuestion.choices.length);
       var randomChoice=this.currentQuestion.choices[rng];
@@ -111,7 +112,6 @@ var trivia_game = {
     //console.log(bool);
     $("#choices-display").addClass("hidden");
     $("#answer-display").removeClass("hidden");
-    $("#image-display").attr("src", this.currentQuestion.image);
 
     var result="";
     var correctAnswer = "";

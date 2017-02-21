@@ -67,7 +67,7 @@ var myQuestions = [
     choices: ["Shoots him", "Throws him over the railing", "Distracted him while Chewbacca hits him", "Nothing"],
     answer: "Nothing",
     info: "Well, technically, the storm trooper flung himself over the railing by tripping over some logs when diving for his gun that Han Solo knocked out of his hands.",
-    image: "./assets/images/han8.jpg"
+    image: "./assets/images/han.gif"
   },
   {
     question: "What happened to Mark Hamill right before filming?",
