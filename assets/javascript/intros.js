@@ -1,7 +1,7 @@
 var myIntros = [
   {
     url: "./assets/images/intros/stars1.jpg",
-    desc: "Staring..."
+    desc: "Starring..."
   },
   {
     url: "./assets/images/intros/luke1.jpg",
