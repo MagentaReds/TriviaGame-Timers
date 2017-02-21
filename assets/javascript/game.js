@@ -11,6 +11,7 @@ var trivia_game = {
   timeoutId: null,
   timeLeft: 0,
 
+  //starts/restarts the game round
   newGame: function(){
     this.correct=0;
     this.incorrect=0;
@@ -25,12 +26,14 @@ var trivia_game = {
     this.runGame();
   },
 
+  //hide/shows divs we want hidden at the start of the game once the start/restart button is pressed
   startDisplay: function() {
-    //console.log($("#start"));
     $("#start, #div-results, #answer-display").hide();
     $("#div-question, #choices-display").show();
   },
 
+  //main game function, displays a question and anwsers, sets timers
+  //randomally chooses a question for the list of function
   runGame: function() {
     if(this.questions.length>0) {
       this.startDisplay();
@@ -47,10 +50,12 @@ var trivia_game = {
     }
   },
 
+  //using jquery, fill in the DOM based on the currentQuestion
+  //choices are shown in a random order
   fillQuestionDisplay: function() {
     console.log(this.currentQuestion);
-    $("#timer-display > h3 > span").text("10");
-    $("#question-display > h3").text(this.currentQuestion.question);
+    $("#timer-display").text("10");
+    $("#question-display").text(this.currentQuestion.question);
     for(var i=0; i<4; ++i) {
       var rng=Math.floor(Math.random()*this.currentQuestion.choices.length);
       var randomChoice=this.currentQuestion.choices[rng];
@@ -67,6 +72,7 @@ var trivia_game = {
     }
   },
 
+  //display the end of game stats, shows/hides elements we want
   displayGameResults: function() {
     $("#div-question").hide();
     $("#div-results").show();
@@ -76,22 +82,27 @@ var trivia_game = {
     $("#unanswered-answers").text(this.unanswered);
   },
 
+  //sets Timeout and Interval for a question countdown and automatic timeout if the user doesn't select an answer
   setTimer: function() {
     this.timeLeft=10;
     this.timeoutId=setTimeout(timedOut, 11000);
     this.timerId= setInterval(timerUpdate, 1000);
   },
 
+  //function that is called if the question timer times out, calls selectAnswer with that a specific case
   timedOut: function() {
     this.selectAnswer("timeout");
   },
 
+  //function that the interval countdown calls, updates the timer on the page
   timerUpdate: function() {
     //console.log(this.timeLeft--);
-    $("#timer-display > h3 > span").text(--(this.timeLeft));
+    $("#timer-display").text(--(this.timeLeft));
   },
 
-  //sent "true", "false", "timeout" depending on the user selection, or the timer running out.
+  //called with "true", "false", "timeout" depending on the user selection, or the timer running out.
+  //clears timers/intervals, displays the result of the answer for that question for a few seconds with a Timeout
+  //automatically start's next round after 5 seconds
   selectAnswer: function(answer) {
     clearTimeout(this.timeoutId);
     clearInterval(this.timerId);
@@ -119,8 +130,9 @@ var trivia_game = {
 
     }
     
-    $("#question-display > h3").text(result);
-    $("#answer-display > h3").text(correctAnswer);
+    $("#question-display").text(result);
+    $("#correct-answer").text(correctAnswer);
+    $("#question-info").text(this.currentQuestion.info);
 
     setTimeout(nextRound, 5000);
   }
@@ -130,6 +142,7 @@ var trivia_game = {
 
 };
 
+//since DOM elements are always on the page and only shown, hidden, we only need to set the on click event listeners once for those elements
 $("#start, #restart").on("click", function() { trivia_game.newGame(); });
 $(".answer-select").on("click", function() { trivia_game.selectAnswer($(this).attr("data-bool")); });
 

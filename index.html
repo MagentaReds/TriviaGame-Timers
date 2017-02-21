@@ -12,15 +12,15 @@
 <div class="container margin-top-some">
   <div class="row">
     <div id="trivia-main" class="col-sm-10 col-sm-offset-1 text-center">
-      <h1 id="trivia-title">Trivia game!</h1>
+      <h1 id="trivia-title">The STAR WARS HOLIDAY SPECIAL Trivia Game!</h1>
         
       <div id="trivia-display" class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          <div id="start" class="always-highlight"><h2>Test Click</h2></div>
+          <div id="start" class="always-highlight"><h2>Start Game!</h2></div>
 
           <div id="div-question">
-            <div id="timer-display"><h3>Time Remaining: <span></span> Seconds</h3></div>
-            <div id="question-display"><h3>Is this a test?</h3></div>
+            <div><h3>Time Remaining: <span id="timer-display"></span> Seconds</h3></div>
+            <div><h3 id="question-display">Is this a test?</h3></div>
             <div id="choices-display">
               <div id="answer0" class="hover-highlight answer-select"><h2>Answer1</h2></div>
               <div id="answer1" class="hover-highlight answer-select"><h2>Answer2</h2></div>
@@ -28,15 +28,16 @@
               <div id="answer3" class="hover-highlight answer-select"><h2>Answer4</h2></div>
             </div>
             <div id="answer-display">
-              <h3></h3>
+              <h3 id="correct-answer"></h3>
               <img id="image-display" alt=" " src="">
+              <h3 id="question-info"></h3>
             </div>
           </div>
 
           <div id="div-results">
             <h3>All Done, here's how you did</h3>
             <p>Correct Answers: <span id="correct-answers">0</span>
-            <p>Incorrerct Answers: <span id="incorrect-answers">0</span>
+            <p>Incorrect Answers: <span id="incorrect-answers">0</span>
             <p>Unanswerd: <span id="unanswered-answers">0</span>
             <h1 id="restart" class="hover-highlight">Start over?</h1>
           </div>
