@@ -75,6 +75,27 @@ var myQuestions = [
     answer: "Had a car wreck",
     info: "Explains the kabuki makeup Hamill was wearing and is also the source of his chin scar.",
     image: "./assets/images/luke2.jpg"
+  },
+  {
+    question: "According to Cooking with Gormaanda, what is step two in preparing Roast Bantha?",
+    choices: ["stir whip stir whip whip whip stir", "stir whip stir whip stir whip stir", "whip stir whip stir whip whip stir", "stir whip whip stir stir whip stir"],
+    answer: "stir whip stir whip whip whip stir",
+    info: "Cooking is easy when you don't actually cook the ingredients!",
+    image: "./assets/images/stirwhip.jpg"
+  },
+  {
+    question: "What planet does the STAR WARS HOLIDAY SPECIAL take place on?",
+    choices: ["Kashyyyk", "Kazook", "Kashyook", "Kashyuk"],
+    answer: "Kashyyyk",
+    info: "This guy doesn't know how to pronouce \"Kashyyyk\"! Nerd! Let us point and laugh at him! Wait...",
+    image: "./assets/images/kazook.jpg"
+  },
+  {
+    question: "On what channel did the STAR WARS HOLIDAY SPECAIL air?",
+    choices: ["CBS", "FOX", "NBC", "ABC"],
+    answer: "CBS",
+    info: "Oh how I bet they wished FOX took the bullet for this instead.",
+    image: "./assets/images/cbs.jpg"
   }
 ];
 
