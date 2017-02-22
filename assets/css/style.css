@@ -61,12 +61,12 @@ body {
 #trivia-main {
   background: green url("../images/kashyyyk1.jpg") no-repeat scroll center;
   background-size: cover;
-  height: 800px;
+  height: 700px;
 }
 
 #trivia-title {
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
 #trivia-display {
