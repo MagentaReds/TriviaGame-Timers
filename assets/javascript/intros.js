@@ -13,7 +13,7 @@ var myIntros = [
   },
   {
     url: "./assets/images/intros/leia-intro.jpg",
-    desc: "Carrie Fisher as Princess Leia"
+    desc: "Carrie Fisher as Luke's Sister (whoops, spoiler)"
   },
   {
     url: "./assets/images/intros/c3po-intro.jpg",
@@ -53,7 +53,7 @@ var myIntros = [
   },
   {
     url: "./assets/images/intros/ackmena-intro.jpg",
-    desc: "Bea Arthur"
+    desc: "Beatrice Arthur"
   },
   {
     url: "./assets/images/intros/saun-intro.jpg",
