@@ -29,7 +29,7 @@ var trivia_game = {
   //hide/shows divs we want hidden at the start of the game once the start/restart button is pressed
   //using bootstrap's hidden/show classes
   startDisplay: function() {
-    $("#start, #div-results, #answer-display").addClass("hidden");
+    $("#start, #div-results, #answer-display, #bonus-button").addClass("hidden");
     $("#div-question, #choices-display").removeClass("hidden");
   },
 
@@ -75,9 +75,12 @@ var trivia_game = {
   },
 
   //display the end of game stats, shows/hides elements we want
+  //also unhides the bonus button if you get all the questions right
   displayGameResults: function() {
     $("#div-question").addClass("hidden");
     $("#div-results").removeClass("hidden");
+    if(this.incorrect===0 && this.unanswered===0)
+      $("#bonus-button").removeClass("hidden");
 
     $("#correct-answers").text(this.correct);
     $("#incorrect-answers").text(this.incorrect);
@@ -147,6 +150,11 @@ var trivia_game = {
 $("#start, #restart").on("click", function() { trivia_game.newGame(); });
 $(".answer-select").on("click", function() { trivia_game.selectAnswer($(this).attr("data-bool")); });
 $("#skip-intro").on("click", endAnimation);
+$("#bonus-button").on("click", function() { 
+  var myElement = document.getElementById("bonus");
+  myElement.volume = .2;
+  myElement.play();
+});
 
 //helper functions for interval and setTimeout to get correct execution context when set from inside trivia_game
 function timedOut() {
