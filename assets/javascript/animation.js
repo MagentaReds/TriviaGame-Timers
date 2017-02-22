@@ -5,12 +5,17 @@ var myTimeout =null;
 
 //fade in "long ago"
 function startAnimation(){
-  $("#title1").animate({"opacity": "1"}, 5000, animate2);  
+  $("#title1").animate({"opacity": "1"}, 5000);  
+  myTimeout=setTimeout(animate2, 5000);
 }
 
 //fade out "long ago"
 //fade in and grow "star wars"
 function animate2(){
+  var myElement = document.getElementById("intro-music");
+  myElement.volume = 0.5;
+  myElement.play();
+
   $("#title1").animate({"opacity": "0"}, 2000, function() { $("#title1").attr("src", "./assets/images/titleshot.jpg"); });
   $("#title2").animate({"opacity": "1", "height": "480px"}, 2000); 
   myTimeout=setTimeout(animate3, 4000);
@@ -78,6 +83,9 @@ function displayIntro(index){
 //after the animation finishes, or is canceld by the skip button, 
 //animates the main game screen into view, letting you play the game
 function endAnimation() {
+  $("#intro-music").animate({volume: 0}, 1000, function() {
+    document.getElementById("intro-music").stop();
+  });
   clearTimeout(myTimeout);
   $("#animation").addClass("hidden");
   $("#trivia-main").removeClass("hidden");
