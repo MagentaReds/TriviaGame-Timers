@@ -84,7 +84,7 @@ function displayIntro(index){
 //animates the main game screen into view, letting you play the game
 function endAnimation() {
   $("#intro-music").animate({volume: 0}, 1000, function() {
-    document.getElementById("intro-music").stop();
+    document.getElementById("intro-music").pause();
   });
   clearTimeout(myTimeout);
   $("#animation").addClass("hidden");
