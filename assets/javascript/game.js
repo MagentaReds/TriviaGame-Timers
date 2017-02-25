@@ -20,7 +20,7 @@ var trivia_game = {
     this.timeoutId=null;
     this.timeLeft=0;
     this.questions=JSON.parse(JSON.stringify(myQuestions));
-    console.log(this.questions);
+    //console.log(this.questions);
 
     this.startDisplay();
     this.runGame();
@@ -54,7 +54,7 @@ var trivia_game = {
   //using jquery, fill in the DOM based on the currentQuestion
   //choices are shown in a random order
   fillQuestionDisplay: function() {
-    console.log(this.currentQuestion);
+    //console.log(this.currentQuestion);
     $("#timer-display").text("10");
     $("#question-display").text(this.currentQuestion.question);
     $("#image-display").attr("src", this.currentQuestion.image);
