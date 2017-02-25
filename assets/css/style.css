@@ -2,7 +2,7 @@ body {
   background: #000 url("../images/stars1.jpg") no-repeat fixed center;
   background-size: cover;
   /*color: #ffd700; star wars yellow*/
-  color: rgb(229,177,58); /*R: 229 G: 177 B: 58 */ /*R: 75 G: 213 B: 238*/ /*rgb(229,177,58) rgb(75,213,238) */
+  color: rgb(75,213,238); /*R: 229 G: 177 B: 58 */ /*R: 75 G: 213 B: 238*/ /*rgb(229,177,58) rgb(75,213,238) */
   font-family: "Droid Sans", arial, verdana, sans-serif;
 }
 
@@ -61,12 +61,13 @@ body {
 #trivia-main {
   background: green url("../images/kashyyyk1.jpg") no-repeat scroll center;
   background-size: cover;
-  height: 700px;
+  height: 800px;
 }
 
 #trivia-title {
   margin-top: 50px;
   margin-bottom: 25px;
+  color: rgb(229,177,58);
 }
 
 #trivia-display {
@@ -80,13 +81,13 @@ body {
 .hover-highlight:hover {
   background-color: darkslategray;
   border: 2px solid white;
-  color: rgb(75,213,238);
+  color: rgb(229,177,58);
 }
 
 .always-highlight {
   background-color: darkslategray;
   border: 2px solid white;
-  color: rgb(75,213,238);
+  color: rgb(229,177,58);
 }
 
 .hover-highlight:active, .always-highlight:active {
@@ -98,4 +99,16 @@ body {
 #image-display {
   height: 300px;
   width: 400px;
+}
+
+
+/*662px viewport on my laptop 1366x768 res*/
+@media screen and (max-height: 800px) {
+  #trivia-main {
+    height: 650px;
+  }
+  #image-display {
+    height: 250px;
+    width: 325px;
+  }
 }
